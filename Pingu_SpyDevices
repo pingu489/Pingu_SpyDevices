@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+import nmap
+
+print("[Info] Herramienta creada para escanear los dispositivos conectados a mi red.")
+print("   ||  Escrito en Python y utiliza Nmap")
+print("   ||  Creada por Pingu Chan  >> https://github.com/pingu489")
+
+print("   ||  Recordatorio: Despues de escribir la IP, colocar el /24")
+
+scanner = nmap.PortScanner()
+
+ip = input("Insertar direccion IP: ")
+print("Esta es la direccion IP: ")
+scanner.scan(ip)
+
+print(scanner.all_hosts())
